@@ -10,7 +10,7 @@ resource "snowflake_warehouse" "tf_warehouse" {
   warehouse_size            = "XSMALL"
   max_cluster_count         = 1
   min_cluster_count         = 1
-  auto_suspend              = 60
+  auto_suspend              = 1
   auto_resume               = true
   enable_query_acceleration = false
   initially_suspended       = true
