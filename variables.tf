@@ -26,4 +26,5 @@ variable "private_key_path" {
 variable "private_key_passphrase" {
   description = "Passphrase for the private key used for Snowflake authentication"
   type        = string
+  sensitive   = true
 }
