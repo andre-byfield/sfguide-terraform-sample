@@ -13,11 +13,6 @@ variable "user" {
   type        = string
 }
 
-variable "role" {
-  description = "Role to be assumed by the user"
-  type        = string
-}
-
 variable "authenticator" {
   description = "Authentication method for Snowflake"
   type        = string
