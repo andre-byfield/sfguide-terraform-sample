@@ -50,7 +50,7 @@ resource "snowflake_user" "tf_user" {
     default_warehouse = snowflake_warehouse.tf_warehouse.name
     default_role      = snowflake_account_role.tf_role.name
     default_namespace = snowflake_schema.tf_db_tf_schema.fully_qualified_name
-    rsa_public_key    = substr(tls_private_key.svc_key.public_key_pem, 27, 398)
+    rsa_public_key    = trimspace(replace(replace(replace(tls_private_key.svc_key.public_key_pem, "-----BEGIN PUBLIC KEY-----", ""), "-----END PUBLIC KEY-----", ""), "\n", ""))
 }
 
 # Grant the new role to the new user
