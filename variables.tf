@@ -1,5 +1,5 @@
 variable "organization_name" {
-  description = "Name of the organisation, where the Snowflake account is created, used to create regionless privatelink fqdns"
+  description = "Name of the organization, where the Snowflake account is created, used to create regionless privatelink fqdns"
   type        = string
 }
 
